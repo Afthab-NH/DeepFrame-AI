@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
+
 export default function Navbar() {
     const {isLoggedIn, user, logout} = useAuth()
     const [isOpen, setIsOpen] = useState(false);
@@ -17,8 +18,8 @@ export default function Navbar() {
                 viewport={{ once: true }}
                 transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1 }}
             >
-                <Link to = '/'>
-                <img src="/logo.svg" alt="logo" className="h-8.5 w-auto" />
+                <Link to = '/' className="text-2xl md:text-2xl font-bold tracking-tight text-white-700">
+                    DeepFrame AI
                 </Link>
 
                 <div className="hidden md:flex items-center gap-8 transition duration-500">
